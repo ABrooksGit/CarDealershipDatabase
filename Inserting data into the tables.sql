@@ -1,4 +1,6 @@
-INSERT INTO driverstown.dealerships (dealership_id, name, address, phone) VALUES
+INSERT INTO driverstown.dealerships 
+(dealership_id, name, address, phone) 
+VALUES
 (1, 'Speedy Motors', '123 Fast Lane, Phoenix, AZ', '602-555-0123'),
 (2, 'Sunset Auto Group', '456 Sunset Blvd, Los Angeles, CA', '310-555-0456'),
 (3, 'Mountain Drive', '789 Ridge Rd, Denver, CO', '720-555-0789'),
@@ -155,7 +157,9 @@ VALUES
 (53829, 2020, 'Tesla', 'Model X', 'SUV', 'White', 15000, 80000, 0),
 (48726, 2016, 'Toyota', 'RAV4', 'SUV', 'Blue', 46000, 19000, 1);
 
-INSERT INTO driverstown.inventory (dealership_id, vin) VALUES
+INSERT INTO driverstown.inventory 
+(dealership_id, vin) 
+VALUES
 (1, 47291),
 (2, 83425),
 (3, 10983),
@@ -258,7 +262,9 @@ INSERT INTO driverstown.inventory (dealership_id, vin) VALUES
 (40, 59482);
 
 
-INSERT INTO driverstown.sales_contract (thedate, name, email, id, vin, sales_tax, recording_fee, processingFee,financed, monthly_payment) VALUES
+INSERT INTO driverstown.sales_contract 
+(thedate, name, email, id, vin, sales_tax, recording_fee, processingFee,financed, monthly_payment) 
+VALUES
 ('2020-03-15', 'Alice Johnson', 'alice.johnson@example.com', 101, 83425, 1, 350.00),
 ('2020-07-22', 'Bob Smith', 'bob.smith@example.com', 102, 67342, 0, 320.00),
 ('2020-11-05', 'Carla Reyes', 'carla.reyes@example.com', 103, 39482, 1, 400.00),
@@ -305,13 +311,12 @@ INSERT INTO driverstown.sales_contract (thedate, name, email, id, vin, sales_tax
 ('2025-07-13', 'Rita Kelly', 'rita.kelly@example.com', 144, 48726, 0, 300.00);
 
 
-
-
 delete from sales_contract 
 
 
 
-INSERT INTO driverstown.sales_contract(thedate, name, email, id, vin, sales_tax, recording_fee, processingfee, financed, monthly_payment)
+INSERT INTO driverstown.sales_contract
+(date_sold, customer_name, customer_email, id, vin, sales_tax, recording_fee, processingfee, financed, monthly_payment)
 VALUES
 ("2023-07-24", "Taylor Smith", "taylorsmith@example.com", 2000, 83425, 1680.00, 150.00, 200.00, 1, 383.83),
 ("2024-03-25", "Morgan Anderson", "morgananderson@example.com", 2001, 67342, 1280.00, 150.00, 200.00, 0, 0.00),
@@ -350,12 +355,7 @@ VALUES
 
 
 INSERT INTO driverstown.lease_contract
-(thedate, name, email, id, vin, total_Vehicle_Price, monthly_payment)
-VALUES('', '', '', 0, 0, 0, 0);
-
-
-INSERT INTO driverstown.lease_contract
-(thedate, name, email, id, vin, total_Vehicle_Price, monthly_payment)
+(date_sold, customer_name, customer_email, id, vin, total_Vehicle_Price, monthly_payment)
 VALUES
 ("2023-10-30", "Jordan Thomas", "jordanthomas@example.com", 2034, 72849, 2560.00, 591.67),
 ("2023-01-18", "Casey Smith", "caseysmith@example.com", 2035, 83579, 1200.00, 0.00),
@@ -367,22 +367,3 @@ VALUES
 ("2024-08-07", "Alex Moore", "alexmoore@example.com", 2041, 67214, 2000.00, 0.00),
 ("2023-08-27", "Jordan Johnson", "jordanjohnson@example.com", 2042, 71945, 1920.00, 462.00),
 ("2023-04-14", "Casey Thomas", "caseythomas@example.com", 2043, 48726, 1520.00, 0.00);
-
-
-
-
-("2023-10-30", "Jordan Thomas", "jordanthomas@example.com", 2034, 72849, 2560.00, 150.00, 200.00, 1, 591.67),
-("2023-01-18", "Casey Smith", "caseysmith@example.com", 2035, 83579, 1200.00, 150.00, 200.00, 0, 0.00),
-("2023-06-21", "Taylor Moore", "taylormoore@example.com", 2036, 50412, 3200.00, 150.00, 200.00, 1, 720.00),
-("2024-01-29", "Chris Johnson", "chrisjohnson@example.com", 2037, 78123, 3440.00, 150.00, 200.00, 0, 0.00),
-("2022-05-12", "Jane Davis", "janedavis@example.com", 2038, 80974, 1680.00, 150.00, 200.00, 1, 406.67),
-("2024-03-01", "Sam Smith", "samsmith@example.com", 2039, 39485, 2560.00, 150.00, 200.00, 0, 0.00),
-("2023-11-22", "John Brown", "johnbrown@example.com", 2040, 28657, 1360.00, 150.00, 200.00, 1, 397.67),
-("2024-08-07", "Alex Moore", "alexmoore@example.com", 2041, 67214, 2000.00, 150.00, 200.00, 0, 0.00),
-("2023-08-27", "Jordan Johnson", "jordanjohnson@example.com", 2042, 71945, 1920.00, 150.00, 200.00, 1, 462.00),
-("2023-04-14", "Casey Thomas", "caseythomas@example.com", 2043, 48726, 1520.00, 150.00, 200.00, 0, 0.00);
-
-
-
-
-
