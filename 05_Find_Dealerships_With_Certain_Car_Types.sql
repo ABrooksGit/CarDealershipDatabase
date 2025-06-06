@@ -1,11 +1,11 @@
 select 
-*
+	d.dealership_id, d.name, d.address, d.phone, v.vin, v.`year`,v.make,v.model,v.color,v.`type`,v.mileage,v.sold
 from 
-    vehicles vehicle
+    vehicles v
 join 
-    inventory inventory ON vehicle.vin = inventory.vin
+    inventory i ON v.vin = i.vin
 join 
-    dealerships dealership ON inventory.dealership_id = dealership.dealership_id
+    dealerships d ON i.dealership_id = d.dealership_id
 where
-    vehicle.type = 'SUV' and
-    vehicle.color = 'blue'
+    v.type = 'SUV' and
+    v.color = 'blue'

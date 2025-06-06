@@ -21,8 +21,10 @@ sold tinyint(1)
 
 CREATE TABLE inventory (
 dealership_id int,
-vin int
+vin int,
+foreign key (dealership_id) references dealerships(dealership_id)
 )
+
 
 CREATE TABLE sales_contract (
 thedate date,

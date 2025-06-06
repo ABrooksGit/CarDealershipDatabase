@@ -1,5 +1,5 @@
 select 
-d.dealership_id , d.name ,d.address , d.phone , v.vin, v.`year`,v.make,v.model,v.color,v.`type`,v.mileage,v.sold
+	d.dealership_id , d.phone , v.vin, v.`year`,v.make,v.model,v.color,v.`type`,v.mileage,v.sold
 from
     vehicles v
 join
