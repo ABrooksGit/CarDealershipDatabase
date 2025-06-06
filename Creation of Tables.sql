@@ -32,11 +32,14 @@ name varchar(100),
 email varchar(100),
 id int auto_increment primary key,
 vin int,
-foreign key (vin) references vehicles(vin),
 financed tinyint(1),
-processingFee double
-
+processingFee double,
+sales_tax double,
+recording_fee double,
+monthly_payment double
+foreign key (vin) references vehicles(vin)
 )
+
 
 CREATE TABLE lease_contract (
 thedate date,
@@ -46,7 +49,7 @@ id int auto_increment primary key,
 vin int,
 foreign key (vin) references vehicles(vin),
 total_Vehicle_Price double,
-original_Vehicle_Price double
+monthly_payment double
 
 )
 	

@@ -1,0 +1,1 @@
+select * from lease_contract lc 

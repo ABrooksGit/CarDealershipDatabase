@@ -258,7 +258,7 @@ INSERT INTO driverstown.inventory (dealership_id, vin) VALUES
 (40, 59482);
 
 
-INSERT INTO driverstown.sales_contract (thedate, name, email, id, vin, financed, processingFee) VALUES
+INSERT INTO driverstown.sales_contract (thedate, name, email, id, vin, sales_tax, recording_fee, processingFee,financed, monthly_payment) VALUES
 ('2020-03-15', 'Alice Johnson', 'alice.johnson@example.com', 101, 83425, 1, 350.00),
 ('2020-07-22', 'Bob Smith', 'bob.smith@example.com', 102, 67342, 0, 320.00),
 ('2020-11-05', 'Carla Reyes', 'carla.reyes@example.com', 103, 39482, 1, 400.00),
@@ -303,6 +303,85 @@ INSERT INTO driverstown.sales_contract (thedate, name, email, id, vin, financed,
 ('2025-06-09', 'Pete Collins', 'pete.collins@example.com', 142, 67214, 0, 0.00),
 ('2025-02-27', 'Quincy Brooks', 'quincy.brooks@example.com', 143, 71945, 1, 375.00),
 ('2025-07-13', 'Rita Kelly', 'rita.kelly@example.com', 144, 48726, 0, 300.00);
+
+
+
+
+delete from sales_contract 
+
+
+
+INSERT INTO driverstown.sales_contract(thedate, name, email, id, vin, sales_tax, recording_fee, processingfee, financed, monthly_payment)
+VALUES
+("2023-07-24", "Taylor Smith", "taylorsmith@example.com", 2000, 83425, 1680.00, 150.00, 200.00, 1, 383.83),
+("2024-03-25", "Morgan Anderson", "morgananderson@example.com", 2001, 67342, 1280.00, 150.00, 200.00, 0, 0.00),
+("2023-03-26", "Jordan Thomas", "jordanthomas@example.com", 2002, 39482, 960.00, 150.00, 200.00, 1, 221.83),
+("2022-04-04", "Casey Smith", "caseysmith@example.com", 2003, 25389, 2080.00, 150.00, 200.00, 0, 0.00),
+("2023-11-09", "Chris Davis", "chrisdavis@example.com", 2004, 34719, 1200.00, 150.00, 200.00, 1, 277.50),
+("2022-10-26", "Dana Jackson", "danajackson@example.com", 2005, 60517, 1520.00, 150.00, 200.00, 0, 0.00),
+("2024-08-03", "Sam Johnson", "samjohnson@example.com", 2006, 12749, 1120.00, 150.00, 200.00, 1, 259.00),
+("2023-05-15", "Alex Moore", "alexmoore@example.com", 2007, 39324, 1360.00, 150.00, 200.00, 0, 0.00),
+("2024-01-07", "John Anderson", "johnanderson@example.com", 2008, 25438, 1520.00, 150.00, 200.00, 1, 351.67),
+("2024-09-19", "Jane Brown", "janebrown@example.com", 2009, 68390, 2560.00, 150.00, 200.00, 0, 0.00),
+("2024-08-15", "Morgan Davis", "morgandavis@example.com", 2010, 47581, 1920.00, 150.00, 200.00, 1, 444.00),
+("2023-01-12", "Jordan Smith", "jordansmith@example.com", 2011, 59734, 1120.00, 150.00, 200.00, 0, 0.00),
+("2023-10-01", "Taylor Thomas", "taylorthomas@example.com", 2012, 42910, 1200.00, 150.00, 200.00, 1, 277.50),
+("2022-11-11", "Chris Miller", "chrismiller@example.com", 2013, 69320, 2800.00, 150.00, 200.00, 0, 0.00),
+("2024-04-26", "Jane Wilson", "janewilson@example.com", 2014, 57981, 2560.00, 150.00, 200.00, 1, 591.67),
+("2022-09-15", "Casey Davis", "caseydavis@example.com", 2015, 39285, 2480.00, 150.00, 200.00, 0, 0.00),
+("2024-02-17", "Taylor Moore", "taylormoore@example.com", 2016, 81206, 2080.00, 150.00, 200.00, 1, 479.33),
+("2023-08-21", "Alex Johnson", "alexjohnson@example.com", 2017, 26017, 1360.00, 150.00, 200.00, 0, 0.00),
+("2022-05-04", "Dana Brown", "danabrown@example.com", 2018, 73420, 2160.00, 150.00, 200.00, 1, 497.67),
+("2023-06-03", "Sam Smith", "samsmith@example.com", 2019, 50123, 1760.00, 150.00, 200.00, 0, 0.00),
+("2024-05-25", "John Thomas", "johnthomas@example.com", 2020, 72501, 2640.00, 150.00, 200.00, 1, 610.00),
+("2023-04-11", "Chris Smith", "chrissmith@example.com", 2021, 83952, 2160.00, 150.00, 200.00, 0, 0.00),
+("2023-12-18", "Morgan Miller", "morganmiller@example.com", 2022, 27864, 1760.00, 150.00, 200.00, 1, 406.67),
+("2024-10-04", "Jordan Wilson", "jordanwilson@example.com", 2023, 43507, 2000.00, 150.00, 200.00, 0, 0.00),
+("2024-11-07", "Taylor Anderson", "tayloranderson@example.com", 2024, 51682, 2240.00, 150.00, 200.00, 1, 518.33),
+("2022-06-30", "Casey Moore", "caseymoore@example.com", 2025, 64092, 1680.00, 150.00, 200.00, 0, 0.00),
+("2022-07-23", "Jane Johnson", "janejohnson@example.com", 2026, 82356, 1040.00, 150.00, 200.00, 1, 237.67),
+("2023-09-01", "Alex Brown", "alexbrown@example.com", 2027, 47503, 2000.00, 150.00, 200.00, 0, 0.00),
+("2022-08-28", "Dana Smith", "danasmith@example.com", 2028, 38046, 1760.00, 150.00, 200.00, 1, 406.67),
+("2023-02-05", "Sam Davis", "samdavis@example.com", 2029, 59124, 1760.00, 150.00, 200.00, 0, 0.00),
+("2022-03-09", "John Miller", "johnmiller@example.com", 2030, 80562, 1120.00, 150.00, 200.00, 1, 255.00),
+("2022-12-25", "Chris Wilson", "chriswilson@example.com", 2031, 65471, 1760.00, 150.00, 200.00, 0, 0.00),
+("2023-07-03", "Taylor Jackson", "taylorjackson@example.com", 2032, 79134, 1680.00, 150.00, 200.00, 1, 406.67),
+("2024-06-15", "Morgan Anderson", "morgananderson@example.com", 2033, 68420, 2560.00, 150.00, 200.00, 0, 0.00)
+
+
+INSERT INTO driverstown.lease_contract
+(thedate, name, email, id, vin, total_Vehicle_Price, monthly_payment)
+VALUES('', '', '', 0, 0, 0, 0);
+
+
+INSERT INTO driverstown.lease_contract
+(thedate, name, email, id, vin, total_Vehicle_Price, monthly_payment)
+VALUES
+("2023-10-30", "Jordan Thomas", "jordanthomas@example.com", 2034, 72849, 2560.00, 591.67),
+("2023-01-18", "Casey Smith", "caseysmith@example.com", 2035, 83579, 1200.00, 0.00),
+("2023-06-21", "Taylor Moore", "taylormoore@example.com", 2036, 50412, 3200.00, 720.00),
+("2024-01-29", "Chris Johnson", "chrisjohnson@example.com", 2037, 78123, 3440.00, 0.00),
+("2022-05-12", "Jane Davis", "janedavis@example.com", 2038, 80974, 1680.00, 406.67),
+("2024-03-01", "Sam Smith", "samsmith@example.com", 2039, 39485, 2560.00, 0.00),
+("2023-11-22", "John Brown", "johnbrown@example.com", 2040, 28657, 1360.00, 397.67),
+("2024-08-07", "Alex Moore", "alexmoore@example.com", 2041, 67214, 2000.00, 0.00),
+("2023-08-27", "Jordan Johnson", "jordanjohnson@example.com", 2042, 71945, 1920.00, 462.00),
+("2023-04-14", "Casey Thomas", "caseythomas@example.com", 2043, 48726, 1520.00, 0.00);
+
+
+
+
+("2023-10-30", "Jordan Thomas", "jordanthomas@example.com", 2034, 72849, 2560.00, 150.00, 200.00, 1, 591.67),
+("2023-01-18", "Casey Smith", "caseysmith@example.com", 2035, 83579, 1200.00, 150.00, 200.00, 0, 0.00),
+("2023-06-21", "Taylor Moore", "taylormoore@example.com", 2036, 50412, 3200.00, 150.00, 200.00, 1, 720.00),
+("2024-01-29", "Chris Johnson", "chrisjohnson@example.com", 2037, 78123, 3440.00, 150.00, 200.00, 0, 0.00),
+("2022-05-12", "Jane Davis", "janedavis@example.com", 2038, 80974, 1680.00, 150.00, 200.00, 1, 406.67),
+("2024-03-01", "Sam Smith", "samsmith@example.com", 2039, 39485, 2560.00, 150.00, 200.00, 0, 0.00),
+("2023-11-22", "John Brown", "johnbrown@example.com", 2040, 28657, 1360.00, 150.00, 200.00, 1, 397.67),
+("2024-08-07", "Alex Moore", "alexmoore@example.com", 2041, 67214, 2000.00, 150.00, 200.00, 0, 0.00),
+("2023-08-27", "Jordan Johnson", "jordanjohnson@example.com", 2042, 71945, 1920.00, 150.00, 200.00, 1, 462.00),
+("2023-04-14", "Casey Thomas", "caseythomas@example.com", 2043, 48726, 1520.00, 150.00, 200.00, 0, 0.00);
+
 
 
 
